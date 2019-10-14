@@ -30,3 +30,25 @@ void MyList::remove(int data){
 		}
 	}
 }
+
+bool MyList::find(int data){
+	for (auto tmp=root;tmp!= nullptr;tmp=tmp->next){
+		if(tmp->data==data){
+			return true;
+		}
+	}
+	return false;
+}
+
+void MyList::append(int data){
+	if(!root){
+		add(data);
+		return;
+	}
+
+	Node* tmp = nullptr,*next=nullptr;
+	for (tmp = root, next=tmp->next; 
+		next != nullptr; 
+		tmp = tmp->next,next=tmp->next);
+	tmp->next = new  Node(data,nullptr);
+}

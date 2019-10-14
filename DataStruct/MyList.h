@@ -8,6 +8,9 @@ public:
 	void add(int data);
 	void remove(int data);
 
+	bool find(int data);
+
+	void append(int data);
 
 	class Node{
 	public:
