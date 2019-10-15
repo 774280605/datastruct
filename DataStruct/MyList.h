@@ -12,6 +12,12 @@ public:
 
 	void append(int data);
 
+	int size();
+
+	void forwardData(int data);
+
+	void printList();
+	void swap(int src, int dest);
 	class Node{
 	public:
 		Node(int data, Node* next){
@@ -27,5 +33,5 @@ private:
 
 
 	Node* root{ nullptr };
-
+	int count_{};
 };
