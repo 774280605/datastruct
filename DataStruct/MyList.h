@@ -18,6 +18,8 @@ public:
 
 	void printList();
 	void swap(int src, int dest);
+
+	
 	class Node{
 	public:
 		Node(int data, Node* next){
@@ -28,6 +30,8 @@ public:
 		int data;
 		Node* next{ nullptr };
 	};
+
+	Node* findByData(int data);
 
 private:
 

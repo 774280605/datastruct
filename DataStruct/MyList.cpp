@@ -94,3 +94,21 @@ void MyList::printList(){
 void MyList::swap(int src, int dest){
 	
 }
+
+MyList::Node* MyList::findByData(int data){
+	if (data == root->data)
+		return root;
+
+	if (data == root->next->data)
+		return root->next;
+
+	Node* tmp = nullptr, * next = nullptr;
+	for (tmp=root,next=tmp->next;
+		next!=nullptr;
+		tmp=tmp->next,next=tmp->next){
+		if(next->data==data){
+			return tmp;
+		}
+	}
+	return nullptr;
+}
