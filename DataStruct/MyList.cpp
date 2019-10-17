@@ -92,7 +92,42 @@ void MyList::printList(){
 }
 
 void MyList::swap(int src, int dest){
+	auto src_p = findByData(src);
+	auto dest_p = findByData(dest);
+	if(src_p== dest_p || src_p==nullptr || dest_p==nullptr)
+		return;
+
+	if(src_p!= root && dest_p!=root){
+		auto tmp_src = src_p->next->next;
+		src_p->next->next = dest_p->next->next;
+		dest_p->next->next = tmp_src;
+
+		auto tmp = src_p->next;
+		src_p->next = dest_p->next;
+		dest_p->next = tmp;
+		return;
+	}
+	if(src_p==root){
+		auto tmp = src_p->next;
+		src_p->next = dest_p->next->next;
+		dest_p->next->next = tmp;
+
+		root = dest_p->next;
+		dest_p->next = src_p;
+		return;
+	}
+
+	if(dest_p==root){
+		auto tmp = dest_p->next;
+		dest_p->next = src_p->next->next;
+		src_p->next->next = tmp;
+
+		root = src_p->next;
+		src_p->next = dest_p;
+		return;
+	}
 	
+
 }
 
 MyList::Node* MyList::findByData(int data){

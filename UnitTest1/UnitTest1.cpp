@@ -21,6 +21,9 @@ namespace UnitTest1
 			
 			list.forwardData(6);
 			list.printList();
+			list.swap(5, 6);
+			list.printList();
+
 		}
 
 
