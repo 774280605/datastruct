@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="state">
+      <UniqueIdentifier>{f976fc45-fd44-401e-bfda-87cac4767b1c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DataStruct.cpp">
@@ -21,10 +24,22 @@
     <ClCompile Include="MyList.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="state\State.cpp">
+      <Filter>state</Filter>
+    </ClCompile>
+    <ClCompile Include="state\Context.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyList.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="state\State.h">
+      <Filter>state</Filter>
+    </ClInclude>
+    <ClInclude Include="state\Context.h">
+      <Filter>state</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

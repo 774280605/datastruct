@@ -153,9 +153,13 @@
   <ItemGroup>
     <ClCompile Include="DataStruct.cpp" />
     <ClCompile Include="MyList.cpp" />
+    <ClCompile Include="state\Context.cpp" />
+    <ClCompile Include="state\State.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyList.h" />
+    <ClInclude Include="state\Context.h" />
+    <ClInclude Include="state\State.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

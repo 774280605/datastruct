@@ -2,16 +2,26 @@
 //
 
 #include <iostream>
-#include "MyList.h"
+#include "state/Context.h"
+
+void testState(){
+	auto dayLightState = new State_Pattern::DayLightState;
+	auto nightState = new State_Pattern::NightState;
+
+	auto context = new State_Pattern::Context(dayLightState);
+	context->mustBeDoWork();
+	context->setState(nightState);
+	context->mustBeDoWork();
+}
+
+
 int main()
 {
-	MyList list;
-	list.add(5);
-	list.add(6);
-	list.add(7);
-	list.add(8);
+	testState();
+
 	
-	list.remove(7);
+
+	return 0;
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
