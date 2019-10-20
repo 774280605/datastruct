@@ -44,7 +44,18 @@ void testStrategy(){
 void testObserver(){
     observer::Subject *subject = new observer::Subject();
     subject->add(new observer::ConcreteObserver());
+    subject->add(new observer::ConcreteObserverB());
     subject->update();
+}
+
+/*
+ * 测试：访问者模式
+ */
+#include "visitor/Visitor.h"
+void testVisitor(){
+    visitor::ConcreteVisitorA*concreteVisitorA=new visitor::ConcreteVisitorA();
+    visitor::ConcreteElementA*concreteElementA=new visitor::ConcreteElementA();
+    concreteElementA->accept(concreteVisitorA);
 }
 
 int main()
@@ -57,6 +68,8 @@ int main()
 	testStrategy();
     printf(u8"测试观察者\n");
     testObserver();
+    printf(u8"测试访问者模式\n");
+    testVisitor();
 	return 0;
 }
 

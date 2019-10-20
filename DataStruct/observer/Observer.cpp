@@ -22,7 +22,7 @@ observer::ConcreteObserver::~ConcreteObserver() {
 }
 
 void observer::ConcreteObserver::update() {
-    printf("observer::ConcreteObserver::update()");
+    printf("observer::ConcreteObserver::update()\n");
 }
 
 void observer::Subject::add(observer::Observer *obs) {
@@ -38,4 +38,9 @@ void observer::Subject::update() {
     for (auto&observer:list_){
         observer->update();
     }
+}
+
+void observer::ConcreteObserverB::update() {
+    printf("observer::ConcreteObserverB::update()\n");
+
 }

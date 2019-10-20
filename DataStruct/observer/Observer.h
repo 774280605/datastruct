@@ -27,6 +27,14 @@ namespace observer{
 
     };
 
+    class ConcreteObserverB:public Observer{
+    public:
+        ConcreteObserverB()= default;
+        virtual ~ConcreteObserverB()= default;
+
+        virtual void update() override;
+    };
+
     class Subject{
     public:
         Subject()= default;
