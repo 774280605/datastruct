@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.14)
+aux_source_directory(./DataStruct/templatemethod src_dir)
+aux_source_directory(./DataStruct/strategy src_dir)
+aux_source_directory(./DataStruct/state src_dir)
+aux_source_directory(./DataStruct src_dir)
+aux_source_directory(./DataStruct/observer src_dir)
+add_executable(datastruct ${src_dir})

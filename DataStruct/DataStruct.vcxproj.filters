@@ -16,6 +16,12 @@
     <Filter Include="state">
       <UniqueIdentifier>{f976fc45-fd44-401e-bfda-87cac4767b1c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="templatemethod">
+      <UniqueIdentifier>{c7c44a8f-3e38-46df-8053-0791c861cbae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="strategy">
+      <UniqueIdentifier>{c6d39830-5e35-4a1d-b579-ff34fd6d26d4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DataStruct.cpp">
@@ -30,6 +36,12 @@
     <ClCompile Include="state\Context.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="templatemethod\AbstractAlgorithm.cpp">
+      <Filter>templatemethod</Filter>
+    </ClCompile>
+    <ClCompile Include="strategy\Strategy.cpp">
+      <Filter>strategy</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyList.h">
@@ -40,6 +52,12 @@
     </ClInclude>
     <ClInclude Include="state\Context.h">
       <Filter>state</Filter>
+    </ClInclude>
+    <ClInclude Include="templatemethod\AbstractAlgorithm.h">
+      <Filter>templatemethod</Filter>
+    </ClInclude>
+    <ClInclude Include="strategy\Strategy.h">
+      <Filter>strategy</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

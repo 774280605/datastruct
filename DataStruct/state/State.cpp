@@ -2,10 +2,10 @@
 #include <cstdio>
 
 void State_Pattern::NightState::doWork(){
-	printf("晚上工作\n");
+	printf("鏅氫笂宸ヤ綔\n");
 }
 
 
 void State_Pattern::DayLightState::doWork(){
-	printf("白天工作\n");
+	printf("鐧藉ぉ宸ヤ綔\n");
 }
