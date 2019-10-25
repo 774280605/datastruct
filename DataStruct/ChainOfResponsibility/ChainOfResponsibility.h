@@ -1,0 +1,14 @@
+//
+// Created by demon on 2019/10/25.
+//
+
+#ifndef DATASTRUCT_CHAINOFRESPONSIBILITY_H
+#define DATASTRUCT_CHAINOFRESPONSIBILITY_H
+
+
+class ChainOfResponsibility {
+
+};
+
+
+#endif //DATASTRUCT_CHAINOFRESPONSIBILITY_H
