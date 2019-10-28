@@ -58,18 +58,29 @@ void testVisitor(){
     concreteElementA->accept(concreteVisitorA);
 }
 
+#include "ChainOfResponsibility/ChainOfResponsibility.h"
+void testChainOfResponsibility(){
+    int event=EVENT_WRITE|EVENT_READ;
+    ReadEvent* readEvent=new ReadEvent(nullptr);
+    WriteEvent *writeEvent = new WriteEvent(readEvent);
+    writeEvent->handle(event);
+};
+
 int main()
 {
-	printf(u8"测试状态模式\n");
+	printf("测试状态模式\n");
 	testState();
-	printf(u8"测试模板方法");
+	printf("测试模板方法");
 	testTemplateMethod();
-	printf(u8"测试策略模式\n");
+	printf("测试策略模式\n");
 	testStrategy();
-    printf(u8"测试观察者\n");
+    printf("测试观察者\n");
     testObserver();
-    printf(u8"测试访问者模式\n");
+    printf("测试访问者模式\n");
     testVisitor();
+    printf("测试职责链模式\n");
+    testChainOfResponsibility();
+
 	return 0;
 }
 
