@@ -9,6 +9,7 @@ aux_source_directory(./DataStruct/visitor src_dir)
 aux_source_directory(./DataStruct/ChainOfResponsibility src_dir)
 aux_source_directory(./DataStruct/command src_dir)
 aux_source_directory(./DataStruct/interpreter src_dir)
+aux_source_directory(./DataStruct/adapter src_dir)
 find_file(myfile [*.h *.cpp]  ./DataStruct/state )
 message(WARNING "${myfile}")
 

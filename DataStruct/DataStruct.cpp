@@ -75,6 +75,12 @@ void testCommand(){
     invoker->operation();
 }
 
+#include "adapter/Adapter.h"
+void testAdapter(){
+    auto target=new Adapter;
+    target->request();
+}
+
 int main()
 {
 	printf("测试状态模式\n");
@@ -91,7 +97,8 @@ int main()
     testChainOfResponsibility();
     printf("测试命令模式\n");
     testCommand();
-
+    printf("测试适配模式\n");
+    testAdapter();
 	return 0;
 }
 
