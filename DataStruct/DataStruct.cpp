@@ -81,6 +81,18 @@ void testAdapter(){
     target->request();
 }
 
+#include "mediator/Mediator.h"
+
+void testMediator(){
+    auto mediator = new ConcreteMediator;
+    auto a = new ConcreteColleagueA(mediator);
+    auto b = new ConcreteColleagueB(mediator);
+    mediator->setColleagueA(a);
+    mediator->setColleagueB(b);
+    printf(b->getAName());
+    printf(a->getBName());
+}
+
 int main()
 {
 	printf("测试状态模式\n");
@@ -99,6 +111,8 @@ int main()
     testCommand();
     printf("测试适配模式\n");
     testAdapter();
+    printf("测试中介者模式\n");
+    testMediator();
 	return 0;
 }
 
