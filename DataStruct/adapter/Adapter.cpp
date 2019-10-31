@@ -18,5 +18,5 @@ void Adapter::request() {
 }
 
 void Adapter::specifyRequest() {
-    Adaptee::specifyRequest();
+   printf("Adapter::specifyRequest()\n");
 }
