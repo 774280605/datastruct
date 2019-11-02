@@ -93,6 +93,21 @@ void testMediator(){
     printf(a->getBName());
 }
 
+#include "bridge/Bridge.h"
+void testBridge(){
+
+    ReflectionAbstraction*abstraction= new ReflectionAbstraction(new Ximplmentor());
+    abstraction->operation();
+}
+
+#include "decorator/Decorator.h"
+
+void testDecorator(){
+    auto decorator = new ConcreteDecorator(new ConcreteComponent);
+    decorator->draw();
+}
+
+
 int main()
 {
 	printf("测试状态模式\n");
@@ -113,6 +128,10 @@ int main()
     testAdapter();
     printf("测试中介者模式\n");
     testMediator();
+    printf("测试桥接模式\n");
+    testBridge();
+    printf("测试装饰者模式\n");
+    testDecorator();
 	return 0;
 }
 
