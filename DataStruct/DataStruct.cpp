@@ -107,6 +107,21 @@ void testDecorator(){
     decorator->draw();
 }
 
+#include "composite/Composite.h"
+void testComposite(){
+    auto root = new composite::Composite();
+    auto leaf= new composite::Composite();
+    root->Add(leaf);
+    root->operation();
+};
+
+#include "proxy/Proxy.h"
+
+void testProxy(){
+    auto proxy= new Proxy;
+    proxy->request();
+}
+
 
 int main()
 {
@@ -132,6 +147,10 @@ int main()
     testBridge();
     printf("测试装饰者模式\n");
     testDecorator();
+    printf("测试组合模式\n");
+    testComposite();
+    printf("测试代理模式\n");
+    testProxy();
 	return 0;
 }
 
